@@ -36,7 +36,12 @@ public class EmployeeController {
 
     @PutMapping("/employees")
     public void updateEmployee(@RequestBody Employee employee) {
-        service.updateEmployee(employee);
+        if (validations.isValidEmail(employee.getEmail())){
+            if(validations.isValidName(employee.getName())) {
+                service.updateEmployee(employee);
+            }
+        }
+
     }
 
     @DeleteMapping("/employees/{id}")
