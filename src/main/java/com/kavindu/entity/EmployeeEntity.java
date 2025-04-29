@@ -24,6 +24,6 @@ public class EmployeeEntity {
     private String email;
     @Enumerated(EnumType.STRING)
     private Department department;
-    private LocalDate createDate;
-    private LocalDate lastUpdateDate;
+    private String createDate;
+    private String lastUpdateDate;
 }

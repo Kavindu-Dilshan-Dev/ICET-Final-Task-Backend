@@ -16,6 +16,6 @@ public class Employee {
     private String name;
     private String email;
     private String department;
-    private LocalDate createDate;
-    private LocalDate lastUpdateDate;
+    private String createDate;
+    private String lastUpdateDate;
 }

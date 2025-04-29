@@ -36,11 +36,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public void updateEmployeeById(int id, Employee employee) {
-        EmployeeEntity getEmployee = repository.searchEmployeeById(id);
-        if (getEmployee != null) {
+    public void updateEmployee(Employee employee) {
             repository.save(mapper.map(employee, EmployeeEntity.class));
-        }
     }
 
     @Override
